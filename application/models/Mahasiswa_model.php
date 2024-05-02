@@ -50,7 +50,7 @@ class Mahasiswa_model extends CI_Model {
 
     }
 
-    public function updatedata(){
+    public function updateData(){
         $post = $this->input->post();
         $this->id_mahasiswa = $post['id_mahasiswa'];
         $this->nama = $post['nama'];

@@ -42,24 +42,26 @@
             <input type="number" class="form-control form-control-user" 
             placeholder="Masukkan NIM Praktikan" name="nim" required="">
           </div>
-          <label for="fakultas">Kelas</label>
+          <label for="kelas">Kelas</label>
           <div class="form-group">
           <input type="text" class="form-control form-control-user" 
           placeholder="Masukkan Kelas Praktikan" name="kelas" required="">
           </div>
-          <label for="jurusan">Jadwal</label>
+          <label for="jadwal">Jadwal</label>
           <div class="form-group">
           <input type="text" class="form-control form-control-user" 
           placeholder="Masukkan Jadwal Praktikan" name="jadwal" required="">
           </div>
-          <label for="jurusan">Sesi</label>
+          <label for="sesi">Sesi</label>
           <div class="form-group">
           <input type="text" class="form-control form-control-user" 
           placeholder="Masukkan Sesi Praktikan" name="sesi" required="">
           </div>
         </div>
         <div class="card-footer">
-          <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan Data</button>
+          <button 
+          type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i> Simpan Data</button>
           <a href="<?php echo base_url();?>" class="btn btn-default">Batal</a>
         </div>
       </div>

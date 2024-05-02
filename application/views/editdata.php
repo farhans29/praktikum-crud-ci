@@ -19,47 +19,61 @@
     
     <?php if ($this->session->flashdata('success')): ?>
     <div class="alert alert-success" role="alert">
-    <?php echo $this->session->flashdata('success');?>. <u><a href="<?php echo base_url();?>mahasiswa" style="color: #155724">Lihat data mahasiswa</a></u>
+    
+    <?php echo $this->session->flashdata('success');?>. <u><a href="<?php echo base_url();?>mahasiswa" 
+    style="color: #155724">Lihat data mahasiswa</a></u>
     </div>               
     <?php endif;?>
-    <form method="POST" action="<?php echo base_url();?>mahasiswa/updatedata" enctype="multipart/form-data">                        
+
+    <form method="POST" 
+    action="<?php echo base_url();?>mahasiswa/updatedata" enctype="multipart/form-data">                        
       <div class="card shadow mb-4">
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">Edit Data Mahasiswa </h6>
         </div>
+
         <div class="card-body">
-          <input type="hidden" name="idmahasiswanya" value="<?php echo $mahasiswa->id_mahasiswa;?>">
+          <input type="hidden" name="id_mahasiswa" 
+          value="<?php echo $mahasiswa->id_mahasiswa;?>">
+
             <label for="nama">Nama Mahasiswa</label>
             <div class="form-group">
               <input type="text" class="form-control form-control-user" 
               placeholder="Masukkan Nama Mahasiswa" name="nama" required="" 
               value="<?php echo $mahasiswa->nama;?>">
             </div>
+
             <label for="nim">Nim Mahasiswa</label>
             <div class="form-group">
               <input type="number" class="form-control form-control-user" 
               placeholder="Masukkan NIM Mahasiswa" name="nim" required="" 
               value="<?php echo $mahasiswa->nim;?>">
             </div>
+
             <label for="fakultas">Fakultas</label>
             <div class="form-group">
               <input type="text" class="form-control form-control-user" 
               placeholder="Masukkan Asal Fakultas Mahasiswa" name="fakultas" required="" 
               value="<?php echo $mahasiswa->fakultas;?>">
             </div>
+
             <label for="jurusan">Jurusan</label>
             <div class="form-group">
               <input type="text" class="form-control form-control-user" 
               placeholder="Masukkan Asal Jurusan Mahasiswa" name="jurusan" required="" 
               value="<?php echo $mahasiswa->jurusan;?>">
             </div>
+
         </div>
         <div class="card-footer">
-          <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan Data</button>
+          <button 
+          type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i> Simpan Data</button>
           <a href="<?php echo base_url();?>mahasiswa" class="btn btn-default">Batal</a>
         </div>
       </div>
     </form> 
+
     <footer class="mt-5 mb-3">
     <div class="container my-auto">
       <div class="text-center my-auto">

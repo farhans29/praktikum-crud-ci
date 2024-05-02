@@ -27,10 +27,10 @@ class Praktikan extends CI_Controller{
         if ($validation->run()){
             $praktikan->createData();            
             
-            redirect(site_url('praktikan/'));   
+            redirect(site_url('praktikan'));   
         }
 
-        redirect(site_url('praktikan/'));        
+        redirect(site_url('praktikan'));        
     }
 
     public function editData($id_prak= null){

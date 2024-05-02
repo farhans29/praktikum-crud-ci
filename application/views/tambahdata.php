@@ -51,7 +51,9 @@
           </div>
         </div>
         <div class="card-footer">
-          <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan Data</button>
+          <button 
+          type="submit" class="btn btn-primary">
+          <i class="fa fa-save"></i> Simpan Data</button>
           <a href="<?php echo base_url();?>" class="btn btn-default">Batal</a>
         </div>
       </div>

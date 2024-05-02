@@ -48,7 +48,7 @@ class Mahasiswa extends CI_Controller{
         $validation->set_rules($mahasiswa->rules());
 
         if ($validation->run()){
-            $mahasiswa->updatedata();
+            $mahasiswa->updateData();
             
             redirect(site_url('mahasiswa'));
         }
