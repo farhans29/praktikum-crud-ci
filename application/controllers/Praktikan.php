@@ -26,15 +26,15 @@ class Praktikan extends CI_Controller{
 
         if ($validation->run()){
             $praktikan->createData();            
-            $this->session->set_flashdata('success','Data Berhasil disimpan!');
-            redirect(site_url('praktikan/inputData'));   
+            
+            redirect(site_url('praktikan/'));   
         }
 
-        redirect(site_url('praktikan/inputData'));        
+        redirect(site_url('praktikan/'));        
     }
 
-    public function editdata($id_prak= null){
-        if(!isset($id_prak)) redirect('praktikan/inputData');
+    public function editData($id_prak= null){
+        if(!isset($id_prak)) redirect('praktikan/inputPraktikan');
 
         $data['praktikan'] = $this->praktikan_model->getByID($id_prak);
         if (!$data['praktikan']) show_404();
@@ -48,8 +48,8 @@ class Praktikan extends CI_Controller{
         $validation->set_rules($praktikan->rules());
 
         if ($validation->run()){
-            $praktikan->updatedata();
-            $this->session->set_flashdata('success','Data Berhasil diperbaharui');            
+            $praktikan->updateData();
+            
             redirect(site_url('praktikan'));
         }
     
@@ -59,7 +59,7 @@ class Praktikan extends CI_Controller{
         if (!isset($id_prak)) show_404();
 
         if ($this->praktikan_model->hapus($id_prak)){
-            $this->session->set_flashdata('delete','Data Berhasil Dihapus!');
+            
             redirect(site_url('praktikan'));
         }
     }

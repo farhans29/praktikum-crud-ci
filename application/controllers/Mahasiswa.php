@@ -26,17 +26,17 @@ class Mahasiswa extends CI_Controller{
 
         if ($validation->run()){
             $mahasiswa->simpan();            
-            $this->session->set_flashdata('success','Data Berhasil disimpan!');
-            redirect(site_url('mahasiswa/inputdata'));   
+            
+            redirect(site_url('mahasiswa'));   
         }
 
-        redirect(site_url('mahasiswa/inputdata'));        
+        redirect(site_url('mahasiswa'));        
     }
 
-    public function editdata($idmahasiswanya = null){
-        if(!isset($idmahasiswanya)) redirect('mahasiswa/inputdata');
+    public function editdata($id_mahasiswa = null){
+        if(!isset($id_mahasiswa)) redirect('mahasiswa/inputdata');
 
-        $data['mahasiswa'] = $this->mahasiswa_model->getByID($idmahasiswanya);
+        $data['mahasiswa'] = $this->mahasiswa_model->getByID($id_mahasiswa);
         if (!$data['mahasiswa']) show_404();
         $this->load->view('editdata',$data);
     }
@@ -49,17 +49,16 @@ class Mahasiswa extends CI_Controller{
 
         if ($validation->run()){
             $mahasiswa->updatedata();
-            $this->session->set_flashdata('success','Data Berhasil diperbaharui');            
+            
             redirect(site_url('mahasiswa'));
         }
     
     }    
 
-    public function hapusdata($idmahasiswanya = null){
-        if (!isset($idmahasiswanya)) show_404();
+    public function hapusdata($id_mahasiswa = null){
+        if (!isset($id_mahasiswa)) show_404();
 
-        if ($this->mahasiswa_model->hapus($idmahasiswanya)){
-            $this->session->set_flashdata('delete','Data Berhasil Dihapus!');
+        if ($this->mahasiswa_model->hapus($id_mahasiswa)){
             redirect(site_url('mahasiswa'));
         }
     }

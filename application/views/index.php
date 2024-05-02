@@ -19,15 +19,15 @@
 
 <body>  
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/praktikum-crud-ci/mahasiswa">Mahasiswa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/praktikum-crud-ci/praktikan">Praktikan</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/praktikum-crud-ci/mahasiswa">Mahasiswa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/praktikum-crud-ci/praktikan">Praktikan</a>
+        </li>
+      </ul>
+</nav>
 <div class="container">
 
   <h4 class="mt-3">Database Kemahasiswaan</h4>

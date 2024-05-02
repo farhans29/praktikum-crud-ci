@@ -44,6 +44,7 @@ class Praktikan_model extends CI_Model {
     }
 
     public function createData(){
+        
         $post = $this->input->post();
         $this->id_prak = uniqid();
         $this->nama_prak = $post['nama'];

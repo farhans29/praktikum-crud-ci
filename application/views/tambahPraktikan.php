@@ -23,7 +23,7 @@
     <h4 class="mt-4">Tambah Data Praktikan</h4>
     <?php if ($this->session->flashdata('success')): ?>
     <div class="alert alert-success" role="alert">
-      <?php echo $this->session->flashdata('success');?>. <u><a href="<?php echo base_url();?>mahasiswa" style="color: #155724">Lihat data praktikan</a></u>
+      <?php echo $this->session->flashdata('success');?>. <u><a href="<?php echo base_url();?>praktikan" style="color: #155724">Lihat data praktikan</a></u>
     </div>               
     <?php endif;?>
     <form method="POST" action="<?php echo base_url();?>praktikan/simpanData" enctype="multipart/form-data">                        
@@ -34,23 +34,28 @@
         <div class="card-body">
           <label for="nama">Nama Praktikan</label>
           <div class="form-group">
-            <input type="text" class="form-control form-control-user" placeholder="Masukkan Nama Praktikan" name="nama" required="">
+            <input type="text" class="form-control form-control-user" 
+            placeholder="Masukkan Nama Praktikan" name="nama" required="">
           </div>
           <label for="nim">Nim Praktikan</label>
           <div class="form-group">
-            <input type="number" class="form-control form-control-user" placeholder="Masukkan NIM Praktikan" name="nim" required="">
+            <input type="number" class="form-control form-control-user" 
+            placeholder="Masukkan NIM Praktikan" name="nim" required="">
           </div>
           <label for="fakultas">Kelas</label>
           <div class="form-group">
-          <input type="text" class="form-control form-control-user" placeholder="Masukkan Kelas Praktikan" name="kelas" required="">
+          <input type="text" class="form-control form-control-user" 
+          placeholder="Masukkan Kelas Praktikan" name="kelas" required="">
           </div>
           <label for="jurusan">Jadwal</label>
           <div class="form-group">
-          <input type="text" class="form-control form-control-user" placeholder="Masukkan Jadwal Praktikan" name="jadwal" required="">
+          <input type="text" class="form-control form-control-user" 
+          placeholder="Masukkan Jadwal Praktikan" name="jadwal" required="">
           </div>
           <label for="jurusan">Sesi</label>
           <div class="form-group">
-          <input type="text" class="form-control form-control-user" placeholder="Masukkan Sesi Praktikan" name="sesi" required="">
+          <input type="text" class="form-control form-control-user" 
+          placeholder="Masukkan Sesi Praktikan" name="sesi" required="">
           </div>
         </div>
         <div class="card-footer">

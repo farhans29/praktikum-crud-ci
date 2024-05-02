@@ -74,8 +74,9 @@
                 <td><?php echo $dataprak->jadwal_prak;?></td>
                 <td><?php echo $dataprak -> sesi_prak; ?> </td>
                 <td style="text-align: center;">
-                  <a href="<?php echo base_url();?>praktikan/editPraktikan/<?php echo $dataprak->id_prak;?>" 
+                  <a href="<?php echo base_url();?>praktikan/editData/<?php echo $dataprak->id_prak;?>" 
                   class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+
                   <a href="<?php echo base_url();?>praktikan/hapusData/<?php echo $dataprak->id_prak;?>" 
                   class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                 </td>                      
