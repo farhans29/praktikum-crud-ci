@@ -34,8 +34,8 @@ class Mahasiswa_model extends CI_Model {
         return $this->db->get($this->_table)->result();
     }
 
-    public function getByID($idmahasiswanya){
-        return $this->db->get_where($this->_table, ["id_mahasiswa" => $idmahasiswanya])->row();
+    public function getByID($id_mahasiswa){
+        return $this->db->get_where($this->_table, ["id_mahasiswa" => $id_mahasiswa])->row();
     }
 
     public function simpan(){
@@ -52,16 +52,16 @@ class Mahasiswa_model extends CI_Model {
 
     public function updatedata(){
         $post = $this->input->post();
-        $this->id_mahasiswa = $post['idmahasiswanya'];
+        $this->id_mahasiswa = $post['id_mahasiswa'];
         $this->nama = $post['nama'];
         $this->nim = $post['nim'];
         $this->fakultas = $post['fakultas'];
         $this->jurusan = $post['jurusan'];
-        $this->db->update($this->_table, $this, array('id_mahasiswa' => $post['idmahasiswanya']));
+        $this->db->update($this->_table, $this, array('id_mahasiswa' => $post['id_mahasiswa']));
     }
 
-    public function hapus($idmahasiswanya){
-        return $this->db->delete($this->_table, array('id_mahasiswa' => $idmahasiswanya));
+    public function hapus($id_mahasiswa){
+        return $this->db->delete($this->_table, array('id_mahasiswa' => $id_mahasiswa));
     }
 
 }

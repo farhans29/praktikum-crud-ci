@@ -8,15 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>CRUD Simpel Codeigniter</title>
+  <title>Kemahasiswaan</title>
   <link href="<?php echo base_url();?>/assets/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="<?php echo base_url();?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>  
   <div class="container">
-    <h4 class="mt-4">CRUD Simpel</h4>
-    <p class="mb-4">Aplikasi Create, Read, Update dan Delete menggunakan Codeigniter Framework</p>
+    <h4 class="mt-4">Edit Data Mahasiswa</h4>
+    
     <?php if ($this->session->flashdata('success')): ?>
     <div class="alert alert-success" role="alert">
     <?php echo $this->session->flashdata('success');?>. <u><a href="<?php echo base_url();?>mahasiswa" style="color: #155724">Lihat data mahasiswa</a></u>

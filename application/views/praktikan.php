@@ -20,16 +20,16 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/kesiswaan/mahasiswa">Mahasiswa</a>
+            <a class="nav-link" href="/praktikum-crud-ci/mahasiswa">Mahasiswa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/kesiswaan/praktikan">Praktikan</a>
+            <a class="nav-link" href="/praktikum-crud-ci/praktikan">Praktikan</a>
           </li>
         </ul>
       </nav>
 <div class="container">
 
-  <h4 class="mt-3">Database Kemahasiswaan</h4>
+  <h4 class="mt-3">Database Praktikan</h4>
   <br>
       <?php if ($this->session->flashdata('success')): ?>
       <div class="alert alert-success" role="alert">
@@ -42,10 +42,12 @@
       </div> 
       <?php endif;?> 
       
-      <a class="btn btn-primary mb-2" href="<?php echo base_url();?>mahasiswa/inputdata"><i class="fa fa-upload"></i> Tambah Data Mahasiswa</a>
+      <a class="btn btn-primary mb-2" href="
+      <?php 
+          echo base_url();?>praktikan/inputData"><i class="fa fa-upload"></i> Tambah Data Praktikan</a>
       <div class="card shadow-sm mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Data Praktikum Mahasiswa Universitas Gunadarma</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Data Praktikan Universitas Gunadarma</h6>
         </div>                        
         <div class="card-body">
           <div class="table-responsive">
@@ -55,25 +57,27 @@
                   <th style="width: 30px;">No.</th>
                   <th>Nama</th>
                   <th>NIM</th>
-                  <th>Fakultas</th>
-                  <th>Jurusan</th>    
+                  <th>Kelas</th>
+                  <th>Jadwal</th>    
+                  <th>Sesi</th>
                   <th style="width: 70px;">Aksi</th>                  
                 </tr>
               </thead>                  
               <tbody>
               <?php $no=1;
-                foreach ($mahasiswa as $datamahasiswa): ?>
+                foreach ($praktikan as $dataprak): ?>
               <tr>
                 <td style="text-align: center;"><?php echo $no++;?></td>
-                <td><?php echo $datamahasiswa->nama;?></td>
-                <td><?php echo $datamahasiswa->nim;?></td>
-                <td><?php echo $datamahasiswa->fakultas;?></td>
-                <td><?php echo $datamahasiswa->jurusan;?></td>
+                <td><?php echo $dataprak->nama_prak;?></td>
+                <td><?php echo $dataprak->nim_prak;?></td>
+                <td><?php echo $dataprak->kelas_prak;?></td>
+                <td><?php echo $dataprak->jadwal_prak;?></td>
+                <td><?php echo $dataprak -> sesi_prak; ?> </td>
                 <td style="text-align: center;">
-                  <a href="<?php echo base_url();?>mahasiswa/editdata/<?php 
-                  echo $datamahasiswa->id_mahasiswa;?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-                  <a href="<?php echo base_url();?>mahasiswa/hapusdata/<?php 
-                  echo $datamahasiswa->id_mahasiswa;?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                  <a href="<?php echo base_url();?>praktikan/editPraktikan/<?php echo $dataprak->id_prak;?>" 
+                  class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                  <a href="<?php echo base_url();?>praktikan/hapusData/<?php echo $dataprak->id_prak;?>" 
+                  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                 </td>                      
               </tr>
               <?php endforeach;?>

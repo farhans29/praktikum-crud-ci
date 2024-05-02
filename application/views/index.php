@@ -21,10 +21,10 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/kesiswaan/mahasiswa">Mahasiswa</a>
+            <a class="nav-link" href="/praktikum-crud-ci/mahasiswa">Mahasiswa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/kesiswaan/praktikan">Praktikan</a>
+            <a class="nav-link" href="/praktikum-crud-ci/praktikan">Praktikan</a>
           </li>
         </ul>
       </nav>
@@ -71,8 +71,10 @@
                 <td><?php echo $datamahasiswa->fakultas;?></td>
                 <td><?php echo $datamahasiswa->jurusan;?></td>
                 <td style="text-align: center;">
-                  <a href="<?php echo base_url();?>mahasiswa/editdata/<?php echo $datamahasiswa->id_mahasiswa;?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
-                  <a href="<?php echo base_url();?>mahasiswa/hapusdata/<?php echo $datamahasiswa->id_mahasiswa;?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                  <a href="<?php echo base_url();?>mahasiswa/editdata/<?php echo $datamahasiswa->id_mahasiswa;?>" 
+                  class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                  <a href="<?php echo base_url();?>mahasiswa/hapusdata/<?php echo $datamahasiswa->id_mahasiswa;?>" 
+                  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                 </td>                      
               </tr>
               <?php endforeach;?>
