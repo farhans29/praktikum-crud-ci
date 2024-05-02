@@ -1,31 +1,26 @@
-# CRUD Simpel Menggunakan Codeigniter Framework (Bahasa Indonesia)
+# CRUD Menggunakan Codeigniter Framework 
 
 ## Tutorial 
 
 Clone dengan menggunakan :
 
 ```sh
-git clone https://github.com/indrijunanda/crud-codeigniter-simple.git
+git clone https://github.com/farhans29/praktikum-crud-ci.git
 ```
 
 atau kamu bisa langsung download dalam bentuk **.zip**
 
 ### Database 
 
-buatlah database dengan nama
+buatlah database dengan nama : kemahasiswaan
 
 ```
-ci_crud
+CREATE DATABASE kemahasiswaan
+USE kemahasiswaan
 ```
 
 dan import file sql yang ada pada folder *mysql file*
 
 
 -------------------
-### Cheers Up!
-
-*Happy Developing and Learning* 💪
-
-
-
-Regards 😁😁
+### Cheers
